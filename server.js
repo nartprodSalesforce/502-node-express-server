@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs'); //handbars backage for formating templates on the page
 const fs = require('fs');
+const port=  process.env.PORT || 3000;
 
 var app = express();
 //middleware configures how express app works
@@ -60,6 +61,6 @@ app.get('/bad',(req,res)=>{
 
     });
 });
-app.listen(3000,()=>{
-    console.log('server is up on pport 3000');
+app.listen(port,()=>{
+    console.log(`server is up on port ${port}`);
 }); //port on localhost for listenning
